@@ -1,0 +1,262 @@
+@charset "UTF-8";
+body {
+	background-color: #FFFFFF;
+	padding: 0;
+	color: #000;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	font-family: verdana, sans-serif;
+	font-size: 90%;
+	line-height: 1.25;
+	width: 93%;
+	background-repeat: repeat;
+	background-image: url(../images/body_bkgd_opt.jpg);
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0px;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 0px;
+}
+
+h1 , h2{
+	font-family: georgia, serif;
+	color: #6992AD;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+h1, h2, h3, h4, h5, h6, p {
+	padding-right: 15px;
+	padding-left: 45px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+section ul {
+	padding-left: 45px;
+	margin-left: 45px;
+}
+
+section ul li {
+	padding-left: 45px;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #0B106E;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #000000;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+#wrapper {
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 735px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/* [disabled]overflow: scroll; */
+}
+/* ~~ This fixed width container surrounds all other blocks ~~ */
+#container {
+	width: 850px;
+	margin-top: 0px;
+	margin-bottom: 0;
+	/* color, h-offset, v-offset, blur, spread */
+	-webkit-box-shadow: 5px 5px 10px 3px #ccc;
+	box-shadow: 5px 5px 10px 3px #ccc;
+	border: 1px solid #ccc;
+	-moz-box-shadow: 5px 5px 10px 3px;
+	background-repeat: repeat-y;
+	background-position: right top;
+	padding: 0px;
+	background-color: #f9f6e8;
+	height: 625px;
+	overflow: hidden;
+	border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	-ms-border-radius: 25px;
+	-o-border-radius: 25px;
+	background-image: url(../images/sidebar_fill.png);
+}
+
+/* ~~ The header is not given a width. It will extend the full width of your layout. ~~ */
+header {
+	height: 130px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+	padding-top: 5px;
+}
+header h1 {
+	font-size: 280%;
+	color: #6992AD;
+	line-height: 100%;
+	font-family: "New Courier", courier, serif;
+	font-weight: normal;
+	text-shadow: 1px 1px 1px #358dca;
+}
+
+/* NAVIGATION */
+.nav {
+	width: 850px;
+	height: 42px;
+	font-size: medium;
+	font-family: gafata, sans-serif;
+	background-color: #BCC4C7;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+ul.nav {
+	margin-left: 110px;
+}
+ul.nav li {
+	display: inline;
+	float: left;
+	list-style-type: none;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-bottom: 4px;
+	padding-left: 8px;
+}
+
+ul.nav li a {
+	display: block;
+	padding-top: 7px;
+	text-align: center;
+	color: #FFF;
+	font-weight: normal;
+	text-decoration: none;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	-ms-border-radius: 8px;
+	-o-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-transition: all 1s ease-in-out 75ms;
+	-moz-transition: all 1s ease-in-out 75ms;
+	-ms-transition: all 1s ease-in-out 75ms;
+	-o-transition: all 1s ease-in-out 75ms;
+	transition: all 1s ease-in-out 75ms;
+}
+
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 110px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	color: #333333;
+	font-size: large;
+	/* [disabled]text-shadow: 1px 1px 1px #358dca; */
+}
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the block elements. The elements within these blocks have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the block itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the block element and place a second block element within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a block set to float right). Many times, padding can be used instead. For blocks where this rule must be broken, you should add a "display:inline" declaration to the block element's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar blocks could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the left instead of the right, simply float these columns the opposite direction (all left instead of all right) and they'll render in reverse order. There's no need to move the blocks around in the HTML source.
+
+*/
+
+#sidebar1 {
+	float: right;
+	width: 180px;
+	background-color: #6892AD;
+	padding-bottom: 10px;
+	clear: both;
+	color: #FFF;
+	font-size: smaller;
+	font-weight: lighter;
+	text-align: right;	/* color, h-offset, v-offset, blur, spread 
+	-webkit-box-shadow: #fff 6px 0px 10px 0px inset;
+	-moz-box-shadow: #fff 6px 0px 10px 0px inset;
+	-box-shadow: #fff 6px 0px 10px 0px inset;*/
+}
+#sidebar1 ul {
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
+#sidebar1 ul li {
+	list-style-type: none;
+}
+#sidebar1 p {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+#sideimg {
+	margin-right: 45px;
+	padding-right: 100px;
+	position: fixed;
+	z-index: 10;
+	right: 15px;
+	bottom: 15px;
+}
+#content1 {
+	width: 72%;
+	float: left;
+	padding-top: 10px;
+	padding-right: 0;
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+
+
+/* FOOTER */
+footer {
+	/* [disabled]background-color: #358DCA; */
+	clear: both;
+}
+#copyright {
+	font-size: small;
+	text-align: right;
+	padding-top: 5px;
+	color: #000;
+	padding-bottom: 5px;
+}
+
+/* FLOAT and CLEAR */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+
+.clearfloat {
+	clear: both;
+	/* [disabled]height:0; */
+	font-size: 1px;
+	line-height: 0px;
+}

@@ -59,7 +59,7 @@ echo ( date('l, F dS Y.') );
 $t=date('H');
 if ($t<'10')
 {
-echo "Have a good morning.";
+	echo "Have a good morning.";
 }
 else if ($t<'20')
 {
@@ -82,7 +82,7 @@ echo $age;
 <h4>Can I offer you a drink?</h4>
 
 <?php
-$age2=('1955-03-09');
+$age2=('1995-03-09');
 if ($age2>21) {
 	?>
     <h2>Congratulations! You are of age. Please drink responsibly.</h2>
