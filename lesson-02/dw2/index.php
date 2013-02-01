@@ -9,6 +9,9 @@
 </head>
 
 <body>
+<?php
+if ($_SERVER['REQUEST_METHOD' ] === 'POST' ){ 
+?>
 <div id="wrapper">
 
 <header>
@@ -20,7 +23,7 @@
 
 <div class="nav">
 	<ul class="nav">
-      <li><a href="../index.php">intro</a></li>
+      <li><a href="index.php">intro</a></li>
       <li><a href="../page2.php">page 2</a></li>
       <li><a href="../page3.php">page 3</a></li>
       <li><a href="../contact.php">contact</a></li>
@@ -43,15 +46,15 @@
 <h3>Simple PHP Examples</h3>
 
 <?php
-$txt1='Hello all.';
-$txt2='This is my first PHP script!';
+$txt1='<p>Hello all.</p>';
+$txt2='<p>This is my first PHP script!</p>';
 echo $txt1 . ' ' . $txt2;
 ?>
 
 <p>Today is</p>
 
 <?php
-echo ( date('l, F dS Y.') );
+echo ( date("<p>l, F dS Y.</p>") );
 ?>
 
 
@@ -59,50 +62,58 @@ echo ( date('l, F dS Y.') );
 $t=date('H');
 if ($t<'10')
 {
-	echo "Have a good morning.";
+	echo "<p>Have a good morning.</p>";
 }
 else if ($t<'20')
 {
-	echo "Have a good day.";
+	echo "<p>Have a good day.</p>";
 }
 else
 {
-	echo "Have a good night.";
+	echo "<p>Have a good night.</p>";
 }
 ?>
 
-<p>I am</p>
-<?php
-$decades=50;
-$years=7;
-$age=$decades+$years;
-echo $age;
-?>
-
-<h4>Can I offer you a drink?</h4>
+<h4>Are you of drinking age?</h4>
 
 <?php
-$age2=('1995-03-09');
-if ($age2>21) {
+function age($birthdate) {
+	return (strtotime('now') - strtotime($birthdate))/(60*60*24*365);
+}
+$age=age($_POST['birthdate']);
+if ($age>21) {
 	?>
-    <h2>Congratulations! You are of age. Please drink responsibly.</h2>
+    <h2>You are <?php echo intval($age) ?>. Have fun! Please drink responsibly.</h2>
+    <img src="">
     <?php
 	}
 else {
 	?>
-    <h2 style="color:red">You are not yet of age. How about a coke?</h2>;
-    <?php
+    <h2 style="color:red">Sorry, you are <?php echo intval($age) ?> and not yet of age. How about a soda?</h2>
+    <img src="">
+    <?php;
+    }
+	}
+else {
+?>
+
+<p>Please enter your birthdate:</p>
+<form action="#" method="post"> 
+<input name="birthdate" type="date" size="50">
+<input name="submit" type="submit">
+</form>
+<?php  
     }
 ?>
 
-</div><!--end of content1 div-->
-</div><!--end of container div--> 
+</div>
+</div>
 
 <footer>
   <p  id="copyright">&copy; 2013 Anna Hausfeld. Developed with valid <a href="http://validator.w3.org/check?uri=referer" title="HTML checker">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS checker">CSS</a>.</p>
 </footer>
 
-</div><!--end of wrapper div-->
+</div>
 
 </body>
 </html>
