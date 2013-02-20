@@ -15,8 +15,6 @@
 if ($_SERVER['REQUEST_METHOD' ] === 'POST' ){ 
 ?>
 
-<div class="gridContainer clearfix">
-
 <div id="header" class="gradient">
   <h1>Anna Hausfeld</h1>
   <h4>CS 53.11B Advanced Web programming with PHP/MySQL</h4>
@@ -26,12 +24,11 @@ if ($_SERVER['REQUEST_METHOD' ] === 'POST' ){
   <ul>
 	  <li><a href="index.html">home</a></li>
       <li><a href="page2.php">php</a></li>
-      <li><a href="page3.php">more php</a></li>
+      <li><a href="carousel/index.html">carousel</a></li>
       <li><a href="contact.php">contact</a></li>
   </ul>
 </div><!--end of navigation div-->
 
-<div id="content1">
 
 <h3>Simple PHP Examples</h3>
 
@@ -95,13 +92,10 @@ else {
 
 <?php  } ?>
 
-</div><!--end of content1 div-->
-
 <div id="footer">
   <p  id="copyright">&copy; 2013 Anna Hausfeld. Developed with valid <a href="http://validator.w3.org/check?uri=referer" title="HTML checker">HTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" title="CSS checker">CSS</a>.</p>
 </div><!--end of footer div-->
 
-</div><!--end of gridContainer div-->
 
 </body>
 </html>

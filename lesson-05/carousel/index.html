@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Anna Hausfeld Carousel</title>
 
-<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/carousel.css" rel="stylesheet">
 <link href="css/bootstrap-responsive.css" rel="stylesheet">
 
   </head>
@@ -24,17 +24,17 @@
             <ul class="nav">
               <li class="active"><a href="#">home</a></li>
               <li><a href="#about">services</a></li>
-              <li><a href="#contact">contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       about
                       <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
+                  <li><a href="#">about packages</a></li>
                   <li><a href="#">about anna</a></li>
-                  <li><a href="#">about ?</a></li>
                 </ul>
               </li><!-- dropdown -->
+              <li><a href="#contact">contact</a></li>
             </ul><!-- /.nav -->
           </div><!--/.nav-collapse -->
         </div><!-- /.container -->
@@ -86,37 +86,88 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="span4">
+        <img class="img-circle" data-src="holder.js/140x140">
           <h2>Services</h2>
            <p>So here you are. You want some help to get your web pages up and functional. You want more views. You want more buys. You want more money in the bank. Or you just want to get the word out to more people. Either way, let me help you reach your goal. </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
         <div class="span4">
+        <img class="img-circle" data-src="holder.js/140x140">
           <h2>About</h2>
            <p>Don't know quite what to do next. I'll help you get both the big picture and the details. With business success and great intervention skills, I'll get you over the speed bumps and on your way again. What do you want to bring into the world? </p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
         <div class="span4">
+        <img class="img-circle" data-src="holder.js/140x140">
           <h2>Contact</h2>
           <p>Call for your twenty minute discovery session. It's my gift to you. Find out if we are a good fit to work together.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
       </div>
 
-      <hr>
+<!-- START THE FEATURETTES -->
 
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-chrome.png">
+        <h2 class="featurette-heading">Anna's Signature ah Program. <span class="muted">It'll blow your mind.</span></h2>
+        <p class="lead">Seven signature steps customized to you and your specific resources and challenges. People rave about it. That's because it works. Start where you are and move to where you want to be with our committed support each step of the way.</p>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-left" src="../assets/img/examples/browser-icon-firefox.png">
+        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
+        <p class="lead">Not only that, but we offer packages to suit most pocketbooks. Find a package that suits you. Each quarter includes an in-person three-hour strategy session plus individual sessions to address your goals, priorities, speed bumps, and actions. You reach your goals with ease.</p>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <img class="featurette-image pull-right" src="../assets/img/examples/browser-icon-safari.png">
+        <h2 class="featurette-heading">Get your gift. <span class="muted">You are worth it.</span></h2>
+        <p class="lead">Call or sign up now to claim your twenty minute complimentary discovery session. It's free. It's our gift to you. Discover if we are a good fit for working together. We welcome your call.</p>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+    
       <footer>
-        <p>Copyright &copy; 2013, Anna Hausfeld. Adapted from David Cochran. Built with Twitter Bootstrap.</p>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Copyright &copy; 2013, Anna Hausfeld. Adapted from David Cochran. Built with Twitter Bootstrap and valid <a href="http://validator.w3.org/check?uri=referer" title="HTML checker">HTML5</a>.</p>
       </footer>
+      
+      <div class="modal hide fade">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>About</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" data-dismiss="modal" class="btn">Close</a>
+  </div>
+</div>
 
+<canvas id="canvas-1"></canvas>
     </div> <!-- /container -->
 
-    <!-- javascript
-    ================================================== -->
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>
-    <!-- Bootstrap jQuery plugins compiled and minified -->
+
+
+<!--JAVASCRIPT-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/paper.js"></script>
+    <script type="text/paperscript" canvas="canvas-1" src="js/wave.js"></script>
+    
     <script>
       $(document).ready(function(){
         $('.carousel').carousel({
